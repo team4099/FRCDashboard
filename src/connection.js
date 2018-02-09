@@ -38,9 +38,9 @@ function onRobotConnection(connected) {
         address.disabled = connect.disabled = false;
         connect.textContent = 'Connect';
         // Add the default address and select xxxx
-        address.value = 'roborio-xxxx.local';
+        address.value = '10.40.99.2';
         address.focus();
-        address.setSelectionRange(8, 12);
+        address.setSelectionRange(0, 11);
         // On click try to connect and disable the input and the button
         connect.onclick = () => {
             ipc.send('connect', address.value);
