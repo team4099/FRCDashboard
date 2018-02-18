@@ -20,10 +20,11 @@
   },
   "homepage": "http://frcdashboard.github.io",
   "devDependencies": {
-    "electron": "^1.7.12",
-    "electron-packager": "^10.1.1"
+    "electron-packager": "^10.1.1",
+    "electron-prebuilt": "^1.4.13"
   },
   "dependencies": {
+    "chart.js": "^2.7.1",
     "wpilib-nt-client": "^1.4.0"
   }
 }
