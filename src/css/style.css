@@ -78,6 +78,11 @@ header {
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
     /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
 }
+#subsystem-states {
+    top: 10px;
+    left: 790px;
+    width: 170px;
+}
 article {
     top: 0;
     left: 50vw;
