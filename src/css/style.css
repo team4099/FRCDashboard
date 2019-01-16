@@ -79,9 +79,9 @@ header {
     /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
 }
 #subsystem-states {
-    top: 10px;
-    left: 790px;
-    width: 170px;
+    top: 5vh;
+    left: 70vw;
+    width: 170vw;
 }
 article {
     top: 0;
