@@ -28,14 +28,29 @@
         </svg>
         <!-- Example robot diagram, arm moves when encoder value changes -->
         <svg id="robot-diagram" width="332" height="450">
-            <text x="40" y="340">Example SVG Robot Diagram</text>
-            <rect x="75" y="360" width="230" height="40"></rect>
-            <rect x="85" y="370" width="210" height="40"></rect>
-            <rect id="robot-arm" x="5" y="375" width="80" height="10"></rect>
-            <circle cx="100" cy="410" r="25"></circle>
-            <circle cx="260" cy="410" r="25"></circle>
-            <rect x="60" y="380" width="250" height="30"></rect>
-            <text id="team" x="185" y="405" text-anchor="middle">####</text>
+            <rect x="220" y="220" width="30" height="160"></rect>
+            <rect x="155" y="295" width="25" height="20"></rect>
+            <rect x="185" y="295" width="25" height="20"></rect>
+            <rect x="150" y="300" width="70" height="10"></rect>
+            <g id="intake"
+               transform="rotate(-10 121 390)">
+                <circle cx="20" cy="390" r="15"></circle>
+                <circle cx="55" cy="390" r="15"></circle>
+                <rect id="robot-arm" x="1" y="385" width="120" height="10"></rect>
+            </g>
+            <g id="intake"
+               transform="rotate(95 121 390)">
+                <circle cx="20" cy="390" r="15"></circle>
+                <circle cx="55" cy="390" r="15"></circle>
+                <rect id="robot-arm" x="1" y="385" width="120" height="10"></rect>
+            </g>
+            <!--<circle cx="25" cy="390" r="15"></circle>
+            <circle cx="60" cy="390" r="15"></circle>
+            <rect id="robot-arm" x="1" y="385" width="120" height="10"></rect>-->
+            <circle cx="120" cy="410" r="25"></circle>
+            <circle cx="280" cy="410" r="25"></circle>
+            <rect x="80" y="380" width="250" height="30"></rect>
+            <text id="team" x="205" y="405" text-anchor="middle">4099</text>
         </svg>
     </article>
     <svg id="subsystem-states">
@@ -47,23 +62,27 @@
     </svg>
     <!-- The sidebar of the dashboard. Designed for smaller control elements like selection boxes and small buttons. -->
     <aside>
+        <p>text</p>
+        <p>text</p>
+        <p>text</p>
+        <p>text</p>
         <!-- Example button which toggles /SmartDashboard/exampleValue NetworkTables value.
-            The <p> below then says the value. -->
+            The <p> below then says the value.
         <div id="example-section">
             <button id="example-button">Change example value</button>
             <p id="example-readout">Value is undefined</p>
         </div>
-        <!-- Autonomous selector -->
+        Autonomous selector
         <div class="select-container">
             <select id="auto-select">
                 <option>No auto modes found</option>
-                <!-- This gets populated by JS -->
+                This gets populated by JS
             </select>
         </div>
         <div>
             <p>Adjust arm height</p>
             <input id="arm-position" type="range" min="0" max="1200" value="770">
-        </div>
+        </div>-->
     </aside>
     <div id="login">
         <input id="connect-address" type="text" value="localhost" disabled>

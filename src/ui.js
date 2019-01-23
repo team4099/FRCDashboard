@@ -11,7 +11,8 @@ let ui = {
         number: document.getElementById('gyro-number')
     },
     robotDiagram: {
-        arm: document.getElementById('robot-arm')
+        arm: document.getElementById('robot-arm'),
+        intake: document.getElementById('intake')
     },
     example: {
         button: document.getElementById('example-button'),
@@ -45,9 +46,10 @@ NetworkTables.addKeyListener('/SmartDashboard/arm/encoder', (key, value) => {
         value = 0;
     }
     // Calculate visual rotation of arm
-    var armAngle = value * 3 / 20 - 45;
+    var armAngle = 20;
     // Rotate the arm in diagram to match real arm
-    ui.robotDiagram.arm.style.transform = `rotate(${armAngle}deg)`;
+    //ui.robotDiagram.intake.style.transform = `rotate(${armAngle}deg)`
+    ui.robotDiagram.intake.rotate(40)
 });
 
 // This button is just an example of triggering an event on the robot by clicking a button.
