@@ -100,7 +100,7 @@ article {
     top: 0;
     left: 60vw;
     height: 100vh;
-    width: 35vw;
+    width: 40vw;
 }
 svg * {
     stroke: white;
@@ -134,7 +134,7 @@ text {
 #robot-diagram {
     position: absolute;
     bottom: 1px;
-    right: 1vw;
+    left: 0px;
 }
 #intake {
     -webkit-transform-origin: right;
