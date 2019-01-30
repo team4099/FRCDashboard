@@ -71,22 +71,34 @@ header {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 50vw;
+    width: 30vw;
     height: 80vh;
     overflow: hidden;
     background-color: #333;
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
     /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
 }
+#limelight-camera {
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 30vw;
+    width: 30vw;
+    height: 80vh;
+    overflow: hidden;
+    background-color: gray;
+    /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
+    /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
+}
 #subsystem-states {
-    top: 2vh;
-    left: 70vw;
+    top: 35vh;
+    left: 85vw;
     width: 15vw;
-    height: 50vh;
+    height: 25vh;
 }
 article {
     top: 0;
-    left: 50vw;
+    left: 60vw;
     height: 100vh;
     width: 35vw;
 }
@@ -124,11 +136,6 @@ text {
     bottom: 1px;
     right: 1vw;
 }
-#robot-arm {
-    -webkit-transform-origin: right;
-    -ms-transform-origin: right;
-    transform-origin: right;
-}
 #intake {
     -webkit-transform-origin: right;
     -ms-transform-origin: right;
@@ -142,7 +149,7 @@ aside {
     right: 0;
     top: 0;
     width: 15vw;
-    height: 100vh;
+    height: 35vh;
 }
 aside > * {
     margin-bottom: 20px;

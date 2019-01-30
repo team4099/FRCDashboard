@@ -39,17 +39,17 @@ NetworkTables.addKeyListener('/SmartDashboard/drive/navx/yaw', updateGyro);
 // The following case is an example, for a robot with an arm at the front.
 NetworkTables.addKeyListener('/SmartDashboard/arm/encoder', (key, value) => {
     // 0 is all the way back, 1200 is 45 degrees forward. We don't want it going past that.
-    if (value > 1140) {
-        value = 1140;
+    if (value > 100) {
+        value = 100;
     }
     else if (value < 0) {
         value = 0;
     }
     // Calculate visual rotation of arm
-    var armAngle = 20;
+    var armAngle = value;
     // Rotate the arm in diagram to match real arm
-    //ui.robotDiagram.intake.style.transform = `rotate(${armAngle}deg)`
-    ui.robotDiagram.intake.rotate(40)
+    ui.robotDiagram.intake.style.transform = `rotate(${armAngle}deg)`
+    //ui.robotDiagram.intake.rotate(40)
 });
 
 // This button is just an example of triggering an event on the robot by clicking a button.

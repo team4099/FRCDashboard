@@ -16,6 +16,7 @@
     <!-- You'll need to mess around with the CSS of #camera (found in css/style.css) to get it to work.
         More explanation in that CSS rule. -->
     <div id="camera"></div>
+    <div id="limelight-camera"></div>
 
     <!-- The main body of the dashboard, by default contains the gyro monitor and the robot diagram -->
     <article>
@@ -28,23 +29,17 @@
         </svg>
         <!-- Example robot diagram, arm moves when encoder value changes -->
         <svg id="robot-diagram" width="332" height="450">
+            <g id="intake"
+               transform="rotate(-10 206 305)">
+                <circle cx="125" cy="305" r="15"></circle>
+                <rect x="106" y="300" width="120" height="10"></rect>
+            </g>
+            <g
+               transform="rotate(0 206 305)">
+                <circle cx="125" cy="305" r="15"></circle>
+                <rect x="106" y="300" width="120" height="10"></rect>
+            </g>
             <rect x="220" y="220" width="30" height="160"></rect>
-            <rect x="155" y="295" width="25" height="20"></rect>
-            <rect x="185" y="295" width="25" height="20"></rect>
-            <rect x="150" y="300" width="70" height="10"></rect>
-            <g id="intake"
-               transform="rotate(-10 121 390)">
-                <circle cx="20" cy="390" r="15"></circle>
-                <rect id="robot-arm" x="1" y="385" width="120" height="10"></rect>
-            </g>
-            <g id="intake"
-               transform="rotate(95 121 390)">
-                <circle cx="20" cy="390" r="15"></circle>
-                <rect id="robot-arm" x="1" y="385" width="120" height="10"></rect>
-            </g>
-            <!--<circle cx="25" cy="390" r="15"></circle>
-            <circle cx="60" cy="390" r="15"></circle>
-            <rect id="robot-arm" x="1" y="385" width="120" height="10"></rect>-->
             <circle cx="120" cy="410" r="20"></circle>
             <circle cx="173" cy="410" r="20"></circle>
             <circle cx="226" cy="410" r="20"></circle>
@@ -57,8 +52,7 @@
         <text x="0" y="10">Climber</text>
         <text x="0" y="50">Elevator</text>
         <text x="0" y="90">Elevator Intake</text>
-        <text x="0" y="130">Grabber</text>
-        <text x="0" y="170">Intake</text>
+        <text x="0" y="130">Intake</text>
     </svg>
     <!-- The sidebar of the dashboard. Designed for smaller control elements like selection boxes and small buttons. -->
     <aside>
@@ -66,23 +60,10 @@
         <p>text</p>
         <p>text</p>
         <p>text</p>
-        <!-- Example button which toggles /SmartDashboard/exampleValue NetworkTables value.
-            The <p> below then says the value.
-        <div id="example-section">
-            <button id="example-button">Change example value</button>
-            <p id="example-readout">Value is undefined</p>
-        </div>
-        Autonomous selector
-        <div class="select-container">
-            <select id="auto-select">
-                <option>No auto modes found</option>
-                This gets populated by JS
-            </select>
-        </div>
         <div>
             <p>Adjust arm height</p>
-            <input id="arm-position" type="range" min="0" max="1200" value="770">
-        </div>-->
+            <input id="arm-position" type="range" min="-10" max="100" value="770">
+        </div>
     </aside>
     <div id="login">
         <input id="connect-address" type="text" value="localhost" disabled>
