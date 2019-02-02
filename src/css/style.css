@@ -75,6 +75,7 @@ header {
     height: 80vh;
     overflow: hidden;
     background-color: #333;
+    background-image: url("http://10.40.99.11:5800");
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
     /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
 }
