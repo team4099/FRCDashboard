@@ -136,6 +136,7 @@ text {
     position: absolute;
     bottom: 1px;
     left: 0px;
+    width: 500px
 }
 #intake {
     -webkit-transform-origin: right;
