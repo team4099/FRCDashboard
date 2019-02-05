@@ -49,18 +49,45 @@
             <text id="team" x="150" y="405" text-anchor="middle">4099</text>
         </svg>
     </article>
-    <svg id="subsystem-states">
-        <text x="0" y="10">Climber</text>
-        <text x="0" y="50">Elevator</text>
-        <text x="0" y="90">Elevator Intake</text>
-        <text x="0" y="130">Intake</text>
-    </svg>
+    <!--<div id="subsystem-states">
+        <p>Climber State</p>
+        <p>Elevator Position</p>
+        <p>Intake State</p>
+        <p>Intake Mode</p>
+        <p>Hatch Panel State</p>
+    </div>-->
     <!-- The sidebar of the dashboard. Designed for smaller control elements like selection boxes and small buttons. -->
     <aside>
-        <p>text</p>
-        <p>text</p>
-        <p>text</p>
-        <p>text</p>
+        <p>Climber State</p>
+        <p id="climber-state">text</p>
+        <script>
+            document.getElementById("climber-state").innerHTML = climberStateEntry;
+        </script>
+
+        <p>Elevator Position</p>
+        <p id="elevator-position">text</p>
+        <script>
+            document.getElementById("climber-state").innerHTML = elevatorPositionEntry;
+        </script>
+
+        <p>Intake State</p>
+        <p id="intake-state">text</p>
+        <script>
+            document.getElementById("climber-state").innerHTML = intakeStateEntry;
+        </script>
+
+        <p>Intake Mode</p>
+        <p id="intake-mode">text</p>
+        <script>
+            document.getElementById("climber-state").innerHTML = intakeModeEntry;
+        </script>
+
+        <p>Hatch Panel State</p>
+        <p id="hatch-panel-state">text</p>
+        <script>
+            document.getElementById("climber-state").innerHTML = hatchPanelStateEntry;
+        </script>
+
         <div>
             <p>Adjust arm height</p>
             <input id="arm-position" type="range" min="-10" max="100" value="770">

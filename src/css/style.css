@@ -76,6 +76,7 @@ header {
     overflow: hidden;
     background-color: #333;
     background-image: url("http://10.40.99.11:5800");
+    background-image: url("http://10.40.99.11:5800");
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
     /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
 }
@@ -91,12 +92,12 @@ header {
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
     /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
 }
-#subsystem-states {
+/*#subsystem-states {
     top: 35vh;
     left: 85vw;
     width: 15vw;
     height: 25vh;
-}
+}*/
 article {
     top: 0;
     left: 60vw;
@@ -150,8 +151,8 @@ text {
 aside {
     right: 0;
     top: 0;
-    width: 15vw;
-    height: 35vh;
+    width: 12vw;
+    height: 75vh;
 }
 aside > * {
     margin-bottom: 20px;
