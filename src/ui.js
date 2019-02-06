@@ -19,7 +19,14 @@ let ui = {
         readout: document.getElementById('example-readout').firstChild
     },
     autoSelect: document.getElementById('auto-select'),
-    armPosition: document.getElementById('arm-position')
+
+    /*armPosition: document.getElementById('arm-position'),
+    climberStateEntry: document.getElementById("climber-state"),
+    elevatorPositionEntry: document.getElementById("elevator-state"),
+    intakeStateEntry: document.getElementById("intake-state"),
+    intakeModeEntry: document.getElementById("intake-mode"),
+    hatchPanelStateEntry: document.getElementById("hatch-panel-state")*/
+
 };
 
 // Key Listeners
@@ -63,6 +70,7 @@ NetworkTables.addKeyListener('/robot/time', (key, value) => {
     // This is an example of how a dashboard could display the remaining time in a match.
     // We assume here that value is an integer representing the number of seconds left.
     ui.timer.innerHTML = value < 0 ? '0:00' : Math.floor(value / 60) + ':' + (value % 60 < 10 ? '0' : '') + value % 60;
+
 });
 
 // Load list of prewritten autonomous modes
