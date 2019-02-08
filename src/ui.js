@@ -19,13 +19,13 @@ let ui = {
         readout: document.getElementById('example-readout').firstChild
     },
     autoSelect: document.getElementById('auto-select'),
-
-    /*armPosition: document.getElementById('arm-position'),
     climberStateEntry: document.getElementById("climber-state"),
     elevatorPositionEntry: document.getElementById("elevator-state"),
     intakeStateEntry: document.getElementById("intake-state"),
-    intakeModeEntry: document.getElementById("intake-mode"),
-    hatchPanelStateEntry: document.getElementById("hatch-panel-state")*/
+    // intakeModeEntry: document.getElementById("intake-mode"),
+    hatchPanelStateEntry: document.getElementById("hatch-panel-state"),
+    wristPositionEntry: document.getElementById('arm-position')
+
 
 };
 
@@ -71,6 +71,23 @@ NetworkTables.addKeyListener('/robot/time', (key, value) => {
     // We assume here that value is an integer representing the number of seconds left.
     ui.timer.innerHTML = value < 0 ? '0:00' : Math.floor(value / 60) + ':' + (value % 60 < 10 ? '0' : '') + value % 60;
 
+});
+
+// Add listeners for state changes
+NetworkTables.addKeyListener('/SmartDashboard/climber/climberState', (key, value) => {
+    ui.climberStateEntry.innerHTML = value;
+});
+
+NetworkTables.addKeyListener('/SmartDashboard/elevator/elevatorState', (key, value) => {
+    ui.elevatorPositionEntry.innerHTML = value;
+});
+
+NetworkTables.addKeyListener('/SmartDashboard/intake/intakeState', (key, value) => {
+    ui.intakeStateEntry.innerHTML = value;
+});
+
+NetworkTables.addKeyListener('/SmartDashboard/wrist/wristState', (key, value) => {
+    ui.wristPositionEntry.innerHTML = value;
 });
 
 // Load list of prewritten autonomous modes
