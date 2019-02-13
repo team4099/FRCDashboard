@@ -1,3 +1,12 @@
+
+document.getElementById("numbers").innerHTML = NetworkTables.getValue("/SmartDashboard/number");
+document.getElementById("climber-state").innerHTML = NetworkTables.getValue("/SmartDashboard/climber/climberState");
+document.getElementById("elevator-position").innerHTML = NetworkTables.getValue("/SmartDashboard/elevator/elevatorHeight");
+document.getElementById("intake-state").innerHTML = NetworkTables.getValue("/SmartDashboard/intake/intakePower");
+document.getElementById("intake-mode").innerHTML = NetworkTables.getValue("value");
+document.getElementById("hatch-panel-state").innerHTML = NetworkTables.getValue("number");
+
+
 // Define UI elements
 let ui = {
     timer: document.getElementById('timer'),
@@ -20,7 +29,7 @@ let ui = {
     },
     autoSelect: document.getElementById('auto-select'),
     climberStateEntry: document.getElementById("climber-state"),
-    elevatorPositionEntry: document.getElementById("elevator-state"),
+    elevatorPositionEntry: document.getElementById("elevator-position"),
     intakeStateEntry: document.getElementById("intake-state"),
     // intakeModeEntry: document.getElementById("intake-mode"),
     hatchPanelStateEntry: document.getElementById("hatch-panel-state"),
@@ -30,7 +39,6 @@ let ui = {
 };
 
 // Key Listeners
-
 // Gyro rotation
 let updateGyro = (key, value) => {
     ui.gyro.val = value;
@@ -76,6 +84,7 @@ NetworkTables.addKeyListener('/robot/time', (key, value) => {
 // Add listeners for state changes
 NetworkTables.addKeyListener('/SmartDashboard/climber/climberState', (key, value) => {
     ui.climberStateEntry.innerHTML = value;
+    ui.climberStateEntry.value = NetworkTables.getValue('/SmartDashboard/climber/climberState');
 });
 
 NetworkTables.addKeyListener('/SmartDashboard/elevator/elevatorState', (key, value) => {
