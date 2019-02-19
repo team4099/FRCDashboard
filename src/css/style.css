@@ -66,6 +66,9 @@ header {
     left: 30vw;
     color: white;
 }
+#starting {
+    left: 40vw;
+}
 #camera {
     padding: 0;
     position: fixed;

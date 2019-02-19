@@ -13,6 +13,20 @@
         <!-- Tells whether robot is connected to dashboard. -->
         <div id="robot-state">Unknown state</div>
     </header>
+    <div id="starting">
+        <select id="starting-position">
+            <option>Starting Position</option>
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+        </select>
+        <select id="starting-height">
+            <option>Starting Height</option>
+            <option value="top">Top</option>
+            <option value="middle">Middle</option>
+            <option value="bottom">Bottom</option>
+        </select>
+    </div>
     <!-- You'll need to mess around with the CSS of #camera (found in css/style.css) to get it to work.
         More explanation in that CSS rule. -->
     <div id="camera"></div>
