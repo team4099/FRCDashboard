@@ -5,7 +5,7 @@ document.getElementById("elevator-position").innerHTML = NetworkTables.getValue(
 document.getElementById("intake-state").innerHTML = NetworkTables.getValue("/SmartDashboard/intake/intakePower");
 document.getElementById("intake-mode").innerHTML = NetworkTables.getValue("value");
 document.getElementById("hatch-panel-state").innerHTML = NetworkTables.getValue("number");
-
+document.getElementById("robot-state").innerHTML = NetworkTables.isRobotConnected();
 
 // Define UI elements
 let ui = {
