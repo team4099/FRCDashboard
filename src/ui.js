@@ -1,12 +1,3 @@
-
-document.getElementById("numbers").innerHTML = NetworkTables.getValue("/SmartDashboard/number");
-document.getElementById("climber-state").innerHTML = NetworkTables.getValue("/SmartDashboard/climber/climberState");
-document.getElementById("elevator-position").innerHTML = NetworkTables.getValue("/SmartDashboard/elevator/elevatorHeight");
-document.getElementById("intake-state").innerHTML = NetworkTables.getValue("/SmartDashboard/intake/intakePower");
-document.getElementById("intake-mode").innerHTML = NetworkTables.getValue("value");
-document.getElementById("hatch-panel-state").innerHTML = NetworkTables.getValue("number");
-document.getElementById("robot-state").innerHTML = NetworkTables.isRobotConnected();
-
 // Define UI elements
 let ui = {
     timer: document.getElementById('timer'),
@@ -31,7 +22,7 @@ let ui = {
     climberStateEntry: document.getElementById("climber-state"),
     elevatorPositionEntry: document.getElementById("elevator-position"),
     intakeStateEntry: document.getElementById("intake-state"),
-    // intakeModeEntry: document.getElementById("intake-mode"),
+    intakeModeEntry: document.getElementById("intake-mode"),
     hatchPanelStateEntry: document.getElementById("hatch-panel-state"),
     wristPositionEntry: document.getElementById('arm-position')
 
@@ -39,32 +30,33 @@ let ui = {
 };
 
 // Key Listeners
+
 // Gyro rotation
 let updateGyro = (key, value) => {
     ui.gyro.val = value;
     ui.gyro.visualVal = Math.floor(ui.gyro.val - ui.gyro.offset);
+    ui.gyro.visualVal %= 360;
     if (ui.gyro.visualVal < 0) {
         ui.gyro.visualVal += 360;
     }
     ui.gyro.arm.style.transform = `rotate(${ui.gyro.visualVal}deg)`;
-    ui.gyro.number.innerHTML = ui.gyro.visualVal + 'º';
+    ui.gyro.number.textContent = ui.gyro.visualVal + 'º';
 };
 NetworkTables.addKeyListener('/SmartDashboard/drive/navx/yaw', updateGyro);
 
 // The following case is an example, for a robot with an arm at the front.
 NetworkTables.addKeyListener('/SmartDashboard/arm/encoder', (key, value) => {
     // 0 is all the way back, 1200 is 45 degrees forward. We don't want it going past that.
-    if (value > 100) {
-        value = 100;
+    if (value > 1140) {
+        value = 1140;
     }
     else if (value < 0) {
         value = 0;
     }
     // Calculate visual rotation of arm
-    var armAngle = value;
+    var armAngle = value * 3 / 20 - 45;
     // Rotate the arm in diagram to match real arm
-    ui.robotDiagram.intake.style.transform = `rotate(${armAngle}deg)`
-    //ui.robotDiagram.intake.rotate(40)
+    ui.robotDiagram.arm.style.transform = `rotate(${armAngle}deg)`;
 });
 
 // This button is just an example of triggering an event on the robot by clicking a button.
@@ -77,26 +69,7 @@ NetworkTables.addKeyListener('/SmartDashboard/example_variable', (key, value) =>
 NetworkTables.addKeyListener('/robot/time', (key, value) => {
     // This is an example of how a dashboard could display the remaining time in a match.
     // We assume here that value is an integer representing the number of seconds left.
-    ui.timer.innerHTML = value < 0 ? '0:00' : Math.floor(value / 60) + ':' + (value % 60 < 10 ? '0' : '') + value % 60;
-
-});
-
-// Add listeners for state changes
-NetworkTables.addKeyListener('/SmartDashboard/climber/climberState', (key, value) => {
-    ui.climberStateEntry.innerHTML = value;
-    ui.climberStateEntry.value = NetworkTables.getValue('/SmartDashboard/climber/climberState');
-});
-
-NetworkTables.addKeyListener('/SmartDashboard/elevator/elevatorState', (key, value) => {
-    ui.elevatorPositionEntry.innerHTML = value;
-});
-
-NetworkTables.addKeyListener('/SmartDashboard/intake/intakeState', (key, value) => {
-    ui.intakeStateEntry.innerHTML = value;
-});
-
-NetworkTables.addKeyListener('/SmartDashboard/wrist/wristState', (key, value) => {
-    ui.wristPositionEntry.innerHTML = value;
+    ui.timer.textContent = value < 0 ? '0:00' : Math.floor(value / 60) + ':' + (value % 60 < 10 ? '0' : '') + value % 60;
 });
 
 // Load list of prewritten autonomous modes
@@ -142,5 +115,5 @@ ui.armPosition.oninput = function() {
 };
 
 addEventListener('error',(ev)=>{
-    ipc.send('windowError',ev)
+    ipc.send('windowError',{mesg:ev.message,file:ev.filename,lineNumber:ev.lineno})
 })
