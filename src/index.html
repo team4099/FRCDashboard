@@ -27,17 +27,41 @@
             <text id="gyro-number" x="90" y="115">0º</text>
         </svg>
         <!-- Example robot diagram, arm moves when encoder value changes -->
-        <svg id="robot-diagram" width="332" height="450">
-            <text x="40" y="340">Example SVG Robot Diagram</text>
-            <rect x="75" y="360" width="230" height="40"></rect>
-            <rect x="85" y="370" width="210" height="40"></rect>
-            <rect id="robot-arm" x="5" y="375" width="80" height="10"></rect>
-            <circle cx="100" cy="410" r="25"></circle>
-            <circle cx="260" cy="410" r="25"></circle>
-            <rect x="60" y="380" width="250" height="30"></rect>
-            <text id="team" x="185" y="405" text-anchor="middle">####</text>
+        <svg id="robot-diagram" width="335" height="450">
+            <g id="intake"
+               transform="rotate(0 235 305)">
+                <rect x="235" y="300" width="120" height="10"></rect>
+                <circle cx="355" cy="305" r="15"></circle>
+            </g>
+            <g
+               transform="rotate(-90 235 305)">
+                <rect x="235" y="300" width="120" height="10"></rect>
+                <circle cx="355" cy="305" r="15"></circle>
+            </g>
+            <rect x="220" y="295" width="25" height="20"></rect>
+            <rect x="200" y="120" width="20" height="260"></rect>
+            <circle cx="80" cy="410" r="15"></circle>
+            <circle cx="127" cy="410" r="15"></circle>
+            <circle cx="174" cy="410" r="15"></circle>
+            <circle cx="220" cy="410" r="15"></circle>
+            <rect x="50" y="380" width="200" height="30"></rect>
+            <text id="team" x="150" y="405" text-anchor="middle">4099</text>
         </svg>
     </article>
+    <div id="starting">
+        <select id="starting-position">
+            <option>Starting Position</option>
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+        </select>
+        <select id="starting-height">
+            <option>Starting Height</option>
+            <option value="top">Top</option>
+            <option value="middle">Middle</option>
+            <option value="bottom">Bottom</option>
+        </select>
+    </div>
     <!-- The sidebar of the dashboard. Designed for smaller control elements like selection boxes and small buttons. -->
     <aside>
         <!-- Example button which toggles /SmartDashboard/exampleValue NetworkTables value.
@@ -57,6 +81,33 @@
             <p>Adjust arm height</p>
             <input id="arm-position" type="range" min="0" max="1200" value="770">
         </div>
+    </aside>
+    <aside>
+        <p>Climber State</p>
+        <p id="climber-state">empty</p>
+
+
+        <p>Elevator Position</p>
+        <p id="elevator-position">empty</p>
+
+
+        <p>Intake State</p>
+        <p id="intake-state">empty</p>
+
+
+        <p>Intake Mode</p>
+        <p id="intake-mode">empty</p>
+
+        <p>Hatch Panel State</p>
+        <p id="hatch-panel-state">empty</p>
+
+
+        <p id="numbers">...</p>
+        <script>
+            //NetworkTables.putValue("number", 1)
+            //document.getElementById("contains-key").innerHTML = NetworkTables.containsKey("number")
+            //document.getElementById("contains-key").innerHTML = NetworkTables.getValue("/SmartDashboard/number")
+        </script>
     </aside>
     <div id="login">
         <input id="connect-address" type="text" value="localhost" disabled>

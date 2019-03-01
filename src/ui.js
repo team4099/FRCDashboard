@@ -18,7 +18,8 @@ let ui = {
         readout: document.getElementById('example-readout').firstChild
     },
     autoSelect: document.getElementById('auto-select'),
-    armPosition: document.getElementById('arm-position')
+    armPosition: document.getElementById('arm-position'),
+    intakeStateEntry: document.getElementById('intake-state')
 };
 
 // Key Listeners
@@ -34,6 +35,9 @@ let updateGyro = (key, value) => {
     ui.gyro.arm.style.transform = `rotate(${ui.gyro.visualVal}deg)`;
     ui.gyro.number.textContent = ui.gyro.visualVal + 'º';
 };
+NetworkTables.addKeyListener('/SmartDashboard/wrist/wristSpeed', (key, value) => {
+  ui.intakeStateEntry.textContent = value;
+});
 NetworkTables.addKeyListener('/SmartDashboard/drive/navx/yaw', updateGyro);
 
 // The following case is an example, for a robot with an arm at the front.
