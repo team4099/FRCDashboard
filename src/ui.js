@@ -19,10 +19,22 @@ let ui = {
     },
     autoSelect: document.getElementById('auto-select'),
     armPosition: document.getElementById('arm-position'),
-    intakeStateEntry: document.getElementById('intake-state')
+
+    elevatorPositionEntry: document.getElementById('elevator-position'),
+    wristPositionEntry: document.getElementById('wrist-position'),
+    wristStateEntry: document.getElementById('wrist-state'),
+    intakeModeEntry: document.getElementById('intake-mode'),
+    intakeStateEntry: document.getElementById('intake-state'),
+    hatchPanelStateEntry: document.getElementById('hatch-panel-state')
+
 };
 
 // Key Listeners
+//Wrist State
+NetworkTables.addKeyListener('/SmartDashboard/wrist/wristState', (key,value) => {
+    ui.wristStateEntry.textContent = value;
+});
+
 
 // Gyro rotation
 let updateGyro = (key, value) => {
