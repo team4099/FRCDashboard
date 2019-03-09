@@ -15,7 +15,10 @@ let ui = {
 };
 
 // Key Listeners
-
+//Wrist State
+NetworkTables.addKeyListener('/SmartDashboard/wrist/wristState', (key,value) => {
+    ui.wristStateEntry.textContent = value;
+});
 
 NetworkTables.addKeyListener('/SmartDashboard/wrist/wristState', (key, value) => {
   ui.subsystems.intakeMode.textContent = value;
