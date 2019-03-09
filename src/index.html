@@ -14,20 +14,7 @@
         <div id="robot-state">Unknown state</div>
         <button id="connect-button">Connect</button>
     </header>
-    <div id="starting">
-        <select id="starting-position">
-            <option>Starting Position</option>
-            <option value="left">Left</option>
-            <option value="center">Center</option>
-            <option value="right">Right</option>
-        </select>
-        <select id="starting-height">
-            <option>Starting Height</option>
-            <option value="top">Top</option>
-            <option value="middle">Middle</option>
-            <option value="bottom">Bottom</option>
-        </select>
-    </div>
+
     <!-- You'll need to mess around with the CSS of #camera (found in css/style.css) to get it to work.
         More explanation in that CSS rule. -->
     <div id="camera"></div>
@@ -35,28 +22,15 @@
 
     <!-- The main body of the dashboard, by default contains the gyro monitor and the robot diagram -->
     <article>
-        <p>Intake Mode</p>
-        <p id="intake-mode">empty</p>
-
-        <p>Hatch Panel State</p>
-        <p id="hatch-state">empty</p>
-
-
+      <ul class="subsystem-state-wrapper">
+        <li class="subsystem-state">
+          <p>Intake Mode: <span id="intake-mode">empty</span></p>
+        </li>
+        <li>
+          <p>Hatch Claw State: <span id="hatch-state">empty</span></p>
+        </li>
+      </ul>
     </article>
-    <div id="starting">
-        <select id="starting-position">
-            <option>Starting Position</option>
-            <option value="left">Left</option>
-            <option value="center">Center</option>
-            <option value="right">Right</option>
-        </select>
-        <select id="starting-height">
-            <option>Starting Height</option>
-            <option value="top">Top</option>
-            <option value="middle">Middle</option>
-            <option value="bottom">Bottom</option>
-        </select>
-    </div>
     <!-- The sidebar of the dashboard. Designed for smaller control elements like selection boxes and small buttons. -->
     <aside>
 
