@@ -25,6 +25,6 @@
   },
   "dependencies": {
     "chart.js": "^2.7.1",
-    "wpilib-nt-client": "^1.4.0"
+    "wpilib-nt-client": "^1.7.1"
   }
 }

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f26f24-71f8-465c-89d9-23d6939ef158" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui.js" afterDir="false" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="55" column="64" lean-forward="true" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="104" column="27" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
             </state>
           </provider>
         </entry>
@@ -30,8 +43,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="196">
               <caret line="61" column="4" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+=======
+            <state relative-caret-position="2070">
+              <caret line="141" column="14" selection-start-line="141" selection-start-column="14" selection-end-line="141" selection-end-column="14" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
             </state>
           </provider>
         </entry>
@@ -39,17 +57,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/networktables/networktables.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="285">
               <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+=======
+            <state relative-caret-position="2985">
+              <caret line="199" column="41" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-226">
               <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
             </state>
           </provider>
         </entry>
@@ -57,8 +88,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="210">
               <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+=======
+            <state relative-caret-position="615">
+              <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
             </state>
           </provider>
         </entry>
@@ -83,6 +119,11 @@
       <find>robot-st</find>
       <find>hea</find>
       <find>addGlo</find>
+<<<<<<< HEAD
+=======
+      <find>dashboard t</find>
+      <find>autoselect.value</find>
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,16 +133,28 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/css/style.css" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/ui.js" />
         <option value="$PROJECT_DIR$/index.html" />
+=======
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/ui.js" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="185" />
     <option name="y" value="23" />
     <option name="width" value="1252" />
     <option name="height" value="813" />
+=======
+    <option name="x" value="26" />
+    <option name="y" value="73" />
+    <option name="width" value="1438" />
+    <option name="height" value="807" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -168,7 +221,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="42331000" />
+=======
+    <option name="totallyTimeSpent" value="46817000" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -180,10 +237,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="185" y="23" width="1252" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989011" visible="true" weight="0.24207962" />
+=======
+    <frame x="3" y="23" width="1438" height="807" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989011" visible="true" weight="0.21030346" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
       <window_info id="Structure" order="1" sideWeight="0.50109893" side_tool="true" weight="0.24945612" />
       <window_info id="Favorites" order="2" sideWeight="0.50109893" side_tool="true" weight="0.24945612" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -195,7 +258,11 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32890856" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32890856" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.30097088" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3006993" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -228,6 +295,7 @@
     <entry file="file://$PROJECT_DIR$/connection.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -239,11 +307,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="61" column="4" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+=======
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="141" column="14" selection-start-line="141" selection-start-column="14" selection-end-line="141" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/networktables/networktables.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="285">
           <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
         </state>
@@ -260,6 +342,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="55" column="64" lean-forward="true" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
+=======
+        <state relative-caret-position="2985">
+          <caret line="199" column="41" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="104" column="27" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+>>>>>>> e67b4d8ef778779ab1a25a7d2581c9a36249b53b
         </state>
       </provider>
     </entry>

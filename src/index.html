@@ -64,6 +64,20 @@
             <text id="team" x="150" y="405" text-anchor="middle">4099</text>
         </svg>
     </article>
+    <div id="starting">
+        <select id="starting-position">
+            <option>Starting Position</option>
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+        </select>
+        <select id="starting-height">
+            <option>Starting Height</option>
+            <option value="top">Top</option>
+            <option value="middle">Middle</option>
+            <option value="bottom">Bottom</option>
+        </select>
+    </div>
     <!-- The sidebar of the dashboard. Designed for smaller control elements like selection boxes and small buttons. -->
     <aside>
         <p>Climber State</p>
@@ -80,6 +94,36 @@
 
         <p>Intake Mode</p>
         <p id="intake-mode">empty</p>
+
+        <p>Hatch Panel State</p>
+        <p id="hatch-panel-state">empty</p>
+
+
+        <p id="numbers">...</p>
+        <script>
+            //NetworkTables.putValue("number", 1)
+            //document.getElementById("contains-key").innerHTML = NetworkTables.containsKey("number")
+            //document.getElementById("contains-key").innerHTML = NetworkTables.getValue("/SmartDashboard/number")
+        </script>
+    </aside>
+    <aside>
+        <p>Climber State</p>
+        <p id="climber-state">empty</p>
+
+
+        <p>Elevator Position</p>
+        <p id="elevator-position">empty</p>
+
+
+        <p>Intake State</p>
+        <p id="intake-state">empty</p>
+
+
+        <p>Intake Mode</p>
+        <p id="intake-mode">empty</p>
+
+        <p>Wrist Position</p>
+        <p id="wrist-position">empty</p>
 
         <p>Hatch Panel State</p>
         <p id="hatch-panel-state">empty</p>

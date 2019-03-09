@@ -19,17 +19,23 @@ let ui = {
         readout: document.getElementById('example-readout').firstChild
     },
     autoSelect: document.getElementById('auto-select'),
-    climberStateEntry: document.getElementById("climber-state"),
-    elevatorPositionEntry: document.getElementById("elevator-position"),
-    intakeStateEntry: document.getElementById("intake-state"),
-    intakeModeEntry: document.getElementById("intake-mode"),
-    hatchPanelStateEntry: document.getElementById("hatch-panel-state"),
-    wristPositionEntry: document.getElementById('arm-position')
+    armPosition: document.getElementById('arm-position'),
 
+    elevatorPositionEntry: document.getElementById('elevator-position'),
+    wristPositionEntry: document.getElementById('wrist-position'),
+    wristStateEntry: document.getElementById('wrist-state'),
+    intakeModeEntry: document.getElementById('intake-mode'),
+    intakeStateEntry: document.getElementById('intake-state'),
+    hatchPanelStateEntry: document.getElementById('hatch-panel-state')
 
 };
 
 // Key Listeners
+//Wrist State
+NetworkTables.addKeyListener('/SmartDashboard/wrist/wristState', (key,value) => {
+    ui.wristStateEntry.textContent = value;
+});
+
 
 // Gyro rotation
 let updateGyro = (key, value) => {
@@ -42,7 +48,16 @@ let updateGyro = (key, value) => {
     ui.gyro.arm.style.transform = `rotate(${ui.gyro.visualVal}deg)`;
     ui.gyro.number.textContent = ui.gyro.visualVal + 'º';
 };
-NetworkTables.addKeyListener('/SmartDashboard/drive/navx/yaw', updateGyro);
+NetworkTables.addKeyListener('/SmartDashboard/intake/intakeState', (key, value) => {
+  ui.intakeStateEntry.textContent = value;
+});
+NetworkTables.addKeyListener('/SmartDashboard/elevator/elevatorHeight', (key, value) => {
+  ui.elevatorPositionEntry.textContent = value;
+});
+NetworkTables.addKeyListener('/SmartDashboard/wrist/wristAngle', (key, value) => {
+  ui.wristPositionEntry.textContent = value;
+});
+NetworkTables.addKeyListener('/SmartDashboard/drinpmve/navx/yaw', updateGyro);
 
 // The following case is an example, for a robot with an arm at the front.
 NetworkTables.addKeyListener('/SmartDashboard/arm/encoder', (key, value) => {
