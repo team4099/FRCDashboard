@@ -1,4 +1,10 @@
+@font-face {
+    font-family: Trueno;
+    src: url('../fonts/TruenoRg.otf');
+}
+
 * {
+    font-family: Trueno;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -50,8 +56,8 @@ body > * {
     background: #222;
 }
 #timer {
-    font-family: monospace;
     display: block;
+    letter-spacing: 15px;
     height: 20vh;
     width: 30vw;
     top: 0;
@@ -77,8 +83,8 @@ header {
     width: 30vw;
     height: 80vh;
     overflow: hidden;
-    background-color: #333;
-    background-image: url("http://10.40.99.11:5800");
+    background-color: white;
+    background-image: url("http://roboRIO-4099-FRC.local:1181/?action=stream");
     /*background-image: url("http://roborio-4099-frc.local:5800/?action=stream");*/
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
     /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
@@ -92,6 +98,7 @@ header {
     height: 80vh;
     overflow: hidden;
     background-color: #434343;
+    background-image: url("http://10.40.99.2:5800");
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
     /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
 }
@@ -104,7 +111,7 @@ header {
 article {
     top: 0;
     left: 60vw;
-    height: 100vh;
+    height: 20vh;
     width: 40vw;
 }
 svg * {
@@ -121,27 +128,7 @@ text {
     stroke: none;
     fill: white;
 }
-#gyro {
-    width: 175px;
-    height: 175px;
-    margin-left: 30px;
-    margin-top: 15px;
-}
-#gyro-arm {
-    -webkit-transform-origin: bottom;
-    -ms-transform-origin: bottom;
-    transform-origin: bottom;
-}
-#gyro-number {
-    font-size: 25px;
-    text-anchor: middle;
-}
-#robot-diagram {
-    position: absolute;
-    bottom: 1px;
-    left: 0px;
-    width: 500px
-}
+
 #intake {
     -webkit-transform-origin: right;
     -ms-transform-origin: right;
@@ -155,7 +142,7 @@ aside {
     right: 0;
     top: 0;
     width: 12vw;
-    height: 75vh;
+    height: 20vh;
 }
 aside > * {
     margin-bottom: 20px;
@@ -183,4 +170,11 @@ body.login #login {
 }
 #login > button {
     margin-left: 5px;
+}
+.subsystem-state-wrapper {
+
+}
+.subsystem-state {
+    padding: 5px;
+    font-size: 24px;
 }
