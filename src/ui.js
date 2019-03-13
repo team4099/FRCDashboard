@@ -4,11 +4,11 @@ let ui = {
     robotState: document.getElementById('robot-state').firstChild,
 
     subsystems: {
-      // elevator: document.getElementById('elevator-position'),
-      // wristPos: document.getElementById('wrist-position'),
-      // wristSpeed: document.getElementById('wrist-speed'),
+      elevator: document.getElementById('elevator-position'),
+      wristPos: document.getElementById('wrist-position'),
+      wristSpeed: document.getElementById('wrist-speed'),
       intakeMode: document.getElementById('intake-mode'),
-      // intakeState: document.getElementById('intake-state'),
+      intakeState: document.getElementById('intake-state'),
       hatchState: document.getElementById('hatch-state'),
     }
 
@@ -18,13 +18,31 @@ let ui = {
 //Wrist State
 
 
+NetworkTables.addKeyListener('/SmartDashboard/elevator/elevatorHeight', (key, value) => {
+    ui.subsystems.elevator.textContent = value;
+});
+
+NetworkTables.addKeyListener('/SmartDashboard/wrist/wristAngle', (key, value) => {
+    ui.subsystems.wristPos.textContent = value;
+});
+
+NetworkTables.addKeyListener('/SmartDashboard/wrist/wristSpeed', (key, value) => {
+    ui.subsystems.wristSpeed.textContent = value;
+});
+
 NetworkTables.addKeyListener('/SmartDashboard/wrist/wristState', (key, value) => {
-  ui.subsystems.intakeMode.textContent = value;
-})
+    ui.subsystems.intakeMode.textContent = value;
+});
+
+NetworkTables.addKeyListener('/SmartDashboard/intake/intakeState', (key, value) => {
+    ui.subsystems.intakeState.textContent = value;
+});
 
 NetworkTables.addKeyListener('/SmartDashboard/intake/hatchOpen', (key, value) => {
-  ui.subsystems.hatchState.textContent = value ? "OPEN" : "CLOSED";
-})
+    ui.subsystems.hatchState.textContent = value ? "OPEN" : "CLOSED";
+});
+
+
 
 NetworkTables.addKeyListener('/robot/time', (key, value) => {
     // This is an example of how a dashboard could display the remaining time in a match.
@@ -42,4 +60,4 @@ ui.example.button.onclick = function() {
 
 addEventListener('error',(ev)=>{
     ipc.send('windowError',{mesg:ev.message,file:ev.filename,lineNumber:ev.lineno})
-})
+});
