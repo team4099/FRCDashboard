@@ -5,10 +5,10 @@ let ui = {
 
     subsystems: {
       elevator: document.getElementById('elevator-position'),
-      wristPos: document.getElementById('wrist-position'),
-      wristSpeed: document.getElementById('wrist-speed'),
+      //wristPos: document.getElementById('wrist-position'),
+      //wristSpeed: document.getElementById('wrist-speed'),
       intakeMode: document.getElementById('intake-mode'),
-      intakeState: document.getElementById('intake-state'),
+      //intakeState: document.getElementById('intake-state'),
       hatchState: document.getElementById('hatch-state'),
     }
 
@@ -22,21 +22,21 @@ NetworkTables.addKeyListener('/SmartDashboard/elevator/elevatorHeight', (key, va
     ui.subsystems.elevator.textContent = value;
 });
 
-NetworkTables.addKeyListener('/SmartDashboard/wrist/wristAngle', (key, value) => {
+/*NetworkTables.addKeyListener('/SmartDashboard/wrist/wristAngle', (key, value) => {
     ui.subsystems.wristPos.textContent = value;
-});
+});*/
 
-NetworkTables.addKeyListener('/SmartDashboard/wrist/wristSpeed', (key, value) => {
+/*NetworkTables.addKeyListener('/SmartDashboard/wrist/wristSpeed', (key, value) => {
     ui.subsystems.wristSpeed.textContent = value;
-});
+});*/
 
 NetworkTables.addKeyListener('/SmartDashboard/wrist/wristState', (key, value) => {
     ui.subsystems.intakeMode.textContent = value;
 });
 
-NetworkTables.addKeyListener('/SmartDashboard/intake/intakeState', (key, value) => {
+/*NetworkTables.addKeyListener('/SmartDashboard/intake/intakeState', (key, value) => {
     ui.subsystems.intakeState.textContent = value;
-});
+});*/
 
 NetworkTables.addKeyListener('/SmartDashboard/intake/hatchOpen', (key, value) => {
     ui.subsystems.hatchState.textContent = value ? "OPEN" : "CLOSED";
