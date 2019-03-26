@@ -2,6 +2,7 @@
 let ui = {
     timer: document.getElementById('timer'),
     robotState: document.getElementById('robot-state').firstChild,
+    startingIntake: document.getElementById('starting-intake-mode'),
 
     subsystems: {
       elevator: document.getElementById('elevator-position'),
