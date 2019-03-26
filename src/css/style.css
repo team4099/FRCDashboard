@@ -80,8 +80,8 @@ header {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 30vw;
-    height: 80vh;
+    width: 50vw;
+    height: 75vh;
     overflow: hidden;
     background-color: white;
     background-image: url("http://roboRIO-4099-FRC.local:1181/?action=stream");
@@ -93,9 +93,9 @@ header {
     padding: 0;
     position: fixed;
     bottom: 0;
-    left: 30vw;
-    width: 30vw;
-    height: 80vh;
+    left: 50vw;
+    width: 50vw;
+    height: 75vh;
     overflow: hidden;
     background-color: #434343;
     background-image: url("http://10.40.99.2:5800");
@@ -111,7 +111,7 @@ header {
 article {
     top: 0;
     left: 60vw;
-    height: 100vh;
+    height: 25vh;
     width: 40vw;
 }
 svg * {
