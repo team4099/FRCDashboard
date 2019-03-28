@@ -1,5 +1,6 @@
 // Define UI elements
 let ui = {
+
     timer: document.getElementById('timer'),
     robotState: document.getElementById('robot-state').firstChild,
     startingIntake: document.getElementById('starting-intake-mode'),
@@ -57,6 +58,8 @@ NetworkTables.addKeyListener('/robot/time', (key, value) => {
 ui.example.button.onclick = function() {
     // Set NetworkTables values to the opposite of whether button has active class.
 };
+
+
 
 
 addEventListener('error',(ev)=>{

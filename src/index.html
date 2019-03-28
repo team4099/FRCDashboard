@@ -13,7 +13,12 @@
         <!-- Tells whether robot is connected to dashboard. -->
         <div id="robot-state">Unknown state</div>
         <button id="connect-button">Connect</button>
-        <select id="starting-intake">
+        <script>
+            function updateStartMode(startVal){
+                NetworkTables.putValue("/SmartDashboard/startingIntakeMode",startVal)
+            }
+        </script>
+        <select id="starting-intake" onchange="updateStartMode(this.value);">
             <option value="hatch">Hatch</option>
             <option value="cargo">Cargo</option>
         </select>
