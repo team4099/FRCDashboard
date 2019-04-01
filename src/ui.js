@@ -63,11 +63,11 @@ ui.example.button.onclick = function() {
 // Update NetworkTables when autonomous selector is changed
 ui.startingIntake.onchange = function() {
     NetworkTables.putValue('/SmartDashboard/autonomous/selectedIntake', this.value);
-}
+};
 
 ui.startingAutoMode.onchange = function() {
     NetworkTables.putValue('/SmartDashboard/autonomous/selectedAutoMode', this.value);
-}
+};
 
 
 
