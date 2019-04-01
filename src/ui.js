@@ -4,6 +4,7 @@ let ui = {
     timer: document.getElementById('timer'),
     robotState: document.getElementById('robot-state').firstChild,
     startingIntake: document.getElementById('starting-intake-mode'),
+    startingAutoMode: document.getElementById('starting-auto-mode'),
 
     subsystems: {
       elevator: document.getElementById('elevator-position'),
@@ -58,6 +59,15 @@ NetworkTables.addKeyListener('/robot/time', (key, value) => {
 ui.example.button.onclick = function() {
     // Set NetworkTables values to the opposite of whether button has active class.
 };
+
+// Update NetworkTables when autonomous selector is changed
+ui.startingIntake.onchange = function() {
+    NetworkTables.putValue('/SmartDashboard/autonomous/selectedIntake', this.value);
+}
+
+ui.startingAutoMode.onchange = function() {
+    NetworkTables.putValue('/SmartDashboard/autonomous/selectedAutoMode', this.value);
+}
 
 
 

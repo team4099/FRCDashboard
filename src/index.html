@@ -18,12 +18,15 @@
                 NetworkTables.putValue("/SmartDashboard/startingIntakeMode",startVal)
             }
         </script>
-        <select id="starting-intake" onchange="updateStartMode(this.value);">
+        <select id="starting-intake">
             <option value="hatch">Hatch</option>
             <option value="cargo">Cargo</option>
         </select>
         <select id="starting-auto-mode">
-            <option>empty</option>
+            <option value="hatch-rocket">Hatch Rocket</option>
+            <option value="hatch-cargo">Hatch Cargo Ship</option>
+            <option value="driver">Driver Operated</option>
+        </select>
         </select>
     </header>
 
