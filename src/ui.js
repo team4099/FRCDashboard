@@ -5,6 +5,8 @@ let ui = {
     robotState: document.getElementById('robot-state').firstChild,
     startingIntake: document.getElementById('starting-intake-mode'),
     startingAutoMode: document.getElementById('starting-auto-mode'),
+    startingPosition: document.getElementById('starting-position'),
+    startingHeight: document.getElementById('starting-height'),
 
     subsystems: {
       elevator: document.getElementById('elevator-position'),
@@ -69,8 +71,13 @@ ui.startingAutoMode.onchange = function() {
     NetworkTables.putValue('/SmartDashboard/autonomous/selectedAutoMode', this.value);
 };
 
+ui.startingPosition.onchange = function() {
+    NetworkTables.putValue('/SmartDashboard/autonomous/selectedPosition', this.value);
+};
 
-
+ui.startingHeight.onchange = function() {
+    NetworkTables.putValue('/SmartDashboard/autonomous/selectedHeight', this.value);
+};
 
 addEventListener('error',(ev)=>{
     ipc.send('windowError',{mesg:ev.message,file:ev.filename,lineNumber:ev.lineno})
