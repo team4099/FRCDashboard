@@ -84,7 +84,9 @@ header {
     height: 75vh;
     overflow: hidden;
     background-color: white;
-    background-image: url("http://roboRIO-4099-FRC.local:1181/?action=stream");
+    background-image: url("http://10.40.99.2:");
+    background-repeat: no-repeat;
+    background-size: 50vw 75vh;
     /*background-image: url("http://roborio-4099-frc.local:5800/?action=stream");*/
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
     /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
@@ -98,7 +100,9 @@ header {
     height: 75vh;
     overflow: hidden;
     background-color: #434343;
-    background-image: url("http://10.40.99.2:5800");
+    background-image: url("http://10.40.99.11:5800");
+    background-repeat: no-repeat;
+    background-size: 50vw 75vh;
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
     /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
 }
