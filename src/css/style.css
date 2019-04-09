@@ -84,7 +84,7 @@ header {
     height: 75vh;
     overflow: hidden;
     background-color: white;
-    background-image: url("http://roboRIO-4099-FRC.local:1181/?action=stream");
+    background-image: url("http://10.40.99.2:1181/?action=stream");
     background-repeat: no-repeat;
     background-size: 50vw 75vh;
     /*background-image: url("http://roborio-4099-frc.local:5800/?action=stream");*/
